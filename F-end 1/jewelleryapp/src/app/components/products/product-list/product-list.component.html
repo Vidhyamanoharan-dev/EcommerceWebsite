@@ -1,0 +1,16 @@
+<div class="products">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.imageUrl" loading="lazy" alt="{{ product.name }}" />
+    <h3>{{ product.name }}</h3>
+    <p>₹{{ product.price }}</p>
+
+    <button [routerLink]="['/products', product.id]">View</button>
+  </div>
+</div>
+
+<!-- Pagination controls -->
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="page === 0">Previous</button>
+  <span>Page {{ page + 1 }} of {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="page >= totalPages - 1">Next</button>
+</div>

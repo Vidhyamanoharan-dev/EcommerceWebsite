@@ -1,0 +1,27 @@
+<div class="cart-container">
+  <h2 class="title">🛒 Your Jewellery Cart</h2>
+
+  <div *ngIf="cart.length === 0" class="empty">
+    <p>Your cart is empty 💛</p>
+  </div>
+
+  <div *ngFor="let item of cart" class="cart-item">
+    <div class="details">
+      <h3>{{ item.productName }}</h3>
+      <p class="price">₹{{ item.price }}</p>
+
+      <div class="qty-section">
+        <button class="qty-btn" (click)="decreaseQuantity(item)">−</button>
+        <span class="qty-value">{{ item.quantity }}</span>
+        <button class="qty-btn" (click)="increaseQuantity(item)">+</button>
+      </div>
+    </div>
+
+    <button class="remove-btn" (click)="removeItem(item.id)">Remove</button>
+  </div>
+
+  <div class="total-section" *ngIf="cart.length > 0">
+    <h3>Total: <span>₹{{ total }}</span></h3>
+    <button class="checkout-btn" (click)="goToOrder()">Proceed to Order</button>
+  </div>
+</div>

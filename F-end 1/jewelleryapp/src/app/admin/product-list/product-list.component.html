@@ -1,0 +1,28 @@
+<h2>Manage Products</h2>
+
+<button class="add-btn" routerLink="/admin/add-product">+ Add Product</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Price (₹)</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{ p.id }}</td>
+      <td><img [src]="p.imageUrl" class="thumb" /></td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.price }}</td>
+      <td>
+        <button class="edit" (click)="edit(p.id)">Edit</button>
+        <button class="delete" (click)="delete(p.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

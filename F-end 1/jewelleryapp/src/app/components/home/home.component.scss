@@ -1,0 +1,21 @@
+.hero {
+  height: 80vh;
+  background:#321c44 center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+
+  .btn {
+    background: #947bda;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    &:hover {
+      background: #503e72;
+    }
+  }
+}

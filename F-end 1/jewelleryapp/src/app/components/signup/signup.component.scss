@@ -1,0 +1,104 @@
+/* Container for both signup & forgot-password forms */
+.auth-container,
+.forgot-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #321c44;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Heading */
+.auth-container h2,
+.forgot-container h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+
+  label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: left;
+  }
+
+  input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+}
+
+/* Info text */
+.info {
+  margin: 10px 0;
+  color: #ff3b3b;
+  font-size: 0.9rem;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #947bda;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover:not(:disabled) {
+    background-color: #ffffff;
+    color: #321c44;
+  }
+
+  &:disabled {
+    background-color: #a0c4ff;
+    cursor: not-allowed;
+  }
+}
+
+/* Links */
+.links {
+  margin-top: 15px;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container,
+  .forgot-container {
+    margin: 40px 15px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

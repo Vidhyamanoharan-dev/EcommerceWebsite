@@ -1,0 +1,14 @@
+<h2>{{ isEdit ? 'Edit Product' : 'Add Product' }}</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <input type="text" placeholder="Product Name" formControlName="name" />
+
+  <input type="number" placeholder="Price" formControlName="price" />
+
+  <input type="text" placeholder="Image URL" formControlName="imageUrl" />
+
+  <textarea placeholder="Description" formControlName="description"></textarea>
+
+  <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
+</form>
